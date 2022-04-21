@@ -10,8 +10,10 @@ class Animal(ABC):
     IsAlive = True
     
     #Constructors
-    def __init__(self):
+    def __init__(self,Age,Name):
         self.value = "Animal"
+        self.age = Age
+        self.name = Name
 
 
     #Methods
@@ -73,7 +75,8 @@ class Bird(Animal):
     wingspan = None
 
     #Constructors
-    def __init__(self):
+    def __init__(self,Age,Name):
+        super().__init__(Age,Name)
         self.value = "Bird"
 
 
@@ -91,7 +94,7 @@ class Bird(Animal):
 
 ########################### Mammals ##########################
     
-## Cat
+################## Cat
         
 class Cat(Mammal):
      #Attributes
@@ -109,7 +112,7 @@ class Cat(Mammal):
     def eat(self):
         return "I eat mice"
 
-## Dog
+################## Dog
         
 class Dog(Mammal):
      #Attributes
@@ -136,9 +139,8 @@ class Pigeon(Bird):
     colour = None
 
     #Constructors
-    def __init__(self):
-        self.value = "Pigeon"
-
+    def __init__(self,Age,Name):
+        super().__init__(Age,Name)
 
     #Methods
     def type(self):

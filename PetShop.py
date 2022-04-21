@@ -1,5 +1,5 @@
 # Pet Shop
-from Animal import Cat,Dog,Pigeon
+from Animal import Cat,Dog,Pigeon,owl,parrot
 
 # Menu
 
@@ -7,6 +7,7 @@ from Animal import Cat,Dog,Pigeon
 print('Menu'
     '1 - Enter New Pet'
     '2 - Look up Pet'
+    '3 - Food check'
     'Q - Quit')
 '''
 # Option 1

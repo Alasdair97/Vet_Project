@@ -100,7 +100,7 @@ class Bird(Animal):
         
 class Cat(Mammal):
      #Attributes
-    
+    colour = None
 
     #Constructors
     def __init__(self,Age,Name,Weight,Health):
@@ -153,3 +153,39 @@ class Pigeon(Bird):
 
     def eat(self):
         return "I eat anythng"
+
+## Parrot
+
+class Parrot(Bird):
+     #Attributes
+    colour = None
+
+    #Constructors
+    def __init__(self,Age,Name,Weight,Health):
+        self.value = "Parrot"
+        super().__init__(Age,Name,Weight,Health)
+
+    #Methods
+    def type(self):
+        return(self.value)
+
+    def eat(self):
+        return "I eat fruit, seeds and nuts"
+
+## Owl
+
+class Owl(Bird):
+     #Attributes
+    colour = None
+
+    #Constructors
+    def __init__(self,Age,Name,Weight,Health):
+        self.value = "Owl"
+        super().__init__(Age,Name,Weight,Health)
+
+    #Methods
+    def type(self):
+        return(self.value)
+
+    def eat(self):
+        return "I eat mice, small birds and frogs"

@@ -2,7 +2,8 @@ from Animal import Cat,Dog,Pigeon
 
 #obj = Pigeon()
 #print(obj.eat())
-charlie = Pigeon(2,'Charlie')
+# age, name, weight, health
+charlie = Pigeon(2,'Charlie', 500, 'Healthy')
 #charlie.name = "Charlie"
 #charlie.age = int(2)
 

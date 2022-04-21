@@ -10,11 +10,12 @@ class Animal(ABC):
     IsAlive = True
     
     #Constructors
-    def __init__(self,Age,Name):
+    def __init__(self,Age,Name,Weight,Health):
         self.value = "Animal"
         self.age = Age
         self.name = Name
-
+        self.weight = Weight
+        self.health = Health
 
     #Methods
     @abstractmethod
@@ -53,8 +54,9 @@ class Mammal(Animal):
 
 
     #Constructors
-    def __init__(self):
+    def __init__(self,Age,Name,Weight,Health):
         self.value = "Mammal"
+        super().__init__(Age,Name,Weight,Health)
 
 
     #Methods
@@ -75,8 +77,8 @@ class Bird(Animal):
     wingspan = None
 
     #Constructors
-    def __init__(self,Age,Name):
-        super().__init__(Age,Name)
+    def __init__(self,Age,Name,Weight,Health):
+        super().__init__(Age,Name,Weight,Health)
         self.value = "Bird"
 
 
@@ -101,8 +103,9 @@ class Cat(Mammal):
     
 
     #Constructors
-    def __init__(self):
+    def __init__(self,Age,Name,Weight,Health):
         self.value = "Cat"
+        super().__init__(Age,Name,Weight,Health)
 
 
     #Methods
@@ -119,8 +122,9 @@ class Dog(Mammal):
     breed = None
 
     #Constructors
-    def __init__(self):
+    def __init__(self,Age,Name,Weight,Health):
         self.value = "Dog"
+        super().__init__(Age,Name,Weight,Health)
 
 
     #Methods
@@ -139,8 +143,9 @@ class Pigeon(Bird):
     colour = None
 
     #Constructors
-    def __init__(self,Age,Name):
-        super().__init__(Age,Name)
+    def __init__(self,Age,Name,Weight,Health):
+        self.value = "Pigeon"
+        super().__init__(Age,Name,Weight,Health)
 
     #Methods
     def type(self):

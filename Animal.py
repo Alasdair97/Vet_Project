@@ -6,7 +6,8 @@ class Animal(ABC):
     age = None
     name = None
     health = None
-    weight = None
+    weight = None # Weight in grams
+    IsAlive = True
     
     #Constructors
     def __init__(self):
@@ -30,7 +31,20 @@ class Animal(ABC):
     def grow(self):
         return ("I am growing")
 
-##################### Mammal 
+    def die(self):
+        self.IsAlive = False
+        self.health = 'Dead'
+        return
+
+    def healthCheck(self,HealthImput):
+        self.health = HealthImput
+        return
+    
+    def weightCheck(self):
+        self.weight = input("Please Enter Weight in g: ")
+        return
+
+##################### Mammal #################
 
 class Mammal(Animal):
     #Attributes
@@ -52,7 +66,7 @@ class Mammal(Animal):
     def type(self):
         pass
 
-################### Bird 
+################### Bird ####################
 
 class Bird(Animal):
     #Attributes
